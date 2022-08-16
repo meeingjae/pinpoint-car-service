@@ -6,6 +6,14 @@ spring:
     name: car-service
   main:
     banner-mode: off
+  datasource:
+    hikari:
+      jdbc-url: jdbc:h2:mem:testdb
+      driver-class-name: org.h2.Driver
+      username: sa
+      password:
+  jpa:
+    database-platform: H2
 
 eureka:
   client:
