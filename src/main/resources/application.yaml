@@ -11,12 +11,32 @@ spring:
       jdbc-url: jdbc:h2:mem:testdb
       driver-class-name: org.h2.Driver
       username: sa
-      password:
+      password: password
   jpa:
     database-platform: H2
+    generate-ddl: true
+
+### Local
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+eureka:
+  client:
+    enabled: false
+
+### Dev
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
 
 eureka:
   client:
     serviceUrl:
       deafultZone: http://localhost:8761/eureka/
+---
 
