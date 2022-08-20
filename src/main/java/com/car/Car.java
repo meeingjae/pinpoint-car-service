@@ -20,4 +20,15 @@ public class Car {
     private String brandName;
     @Column
     private long price;
+
+    public Car() {
+
+    }
+
+    public Car(long id, String name, String brandName, long price) {
+        this.id = id;
+        this.name = name;
+        this.brandName = brandName;
+        this.price = price;
+    }
 }
