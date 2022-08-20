@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +23,11 @@ public class CarController {
     public ResponseEntity<List<Car>> getCar() {
 
         return ResponseEntity.ok(carRepository.findAll());
+    }
+
+    @PostMapping(value = "/")
+    public ResponseEntity<Car> createCar(@RequestBody Car car) {
+
+        return ResponseEntity.ok(carRepository.save(car));
     }
 }
