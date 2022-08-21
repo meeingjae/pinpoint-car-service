@@ -31,4 +31,20 @@ public class Car {
         this.brandName = brandName;
         this.price = price;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBrandName() {
+        return brandName;
+    }
+
+    public long getPrice() {
+        return price;
+    }
 }
