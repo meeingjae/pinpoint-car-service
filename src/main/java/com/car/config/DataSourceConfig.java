@@ -1,5 +1,7 @@
 package com.car.config;
 
+import java.sql.SQLException;
+
 import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 
@@ -8,6 +10,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.zaxxer.hikari.HikariDataSource;
+
+import oracle.jdbc.pool.OracleDataSource;
 
 @Configuration
 public class DataSourceConfig {
